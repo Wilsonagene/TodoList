@@ -19,7 +19,8 @@ struct AddView: View {
     var body: some View {
         ScrollView {
             VStack {
-                TextField("Type something here", text: $textfield)
+                TextField("Type something here", text: $textfield, axis: .vertical)
+//                    .lineLimit(5)
                     .padding(.horizontal)
                     .frame(height: 55)
                     .background(Color(UIColor.secondarySystemBackground))
@@ -36,6 +37,9 @@ struct AddView: View {
                         .background(Color.accentColor)
                         .cornerRadius(10)
                 }
+                
+            Spacer(minLength: 500)
+
 
                 
             }
